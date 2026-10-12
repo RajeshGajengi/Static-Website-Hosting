@@ -258,6 +258,16 @@ Terraform's jsonencode() accepts HCL objects, so the policy can be expressed wit
 Also, make sure the bucket policy has a valid dependency relationship with the distribution and OAC. If Terraform reports a dependency cycle, restructure the policy or use a separate policy document/resource strategy to avoid it.
 
 
+## 🧹 Infrastructure Cleanup
+To remove the infrastructure created by Terraform, run:
+```
+terraform destroy
+```
+Review the proposed deletion and confirm when prompted.
+
+Important: Terraform may be unable to delete an S3 bucket while it contains objects. Empty the bucket first or implement an appropriate cleanup strategy. Do not run this command against shared or production infrastructure without reviewing the impact.
+
+
 
 ## 🧠 Key Learnings
 
@@ -317,7 +327,7 @@ Use GitHub OIDC and AWS IAM roles to avoid storing long-lived AWS credentials in
 #### 4. Configure a Custom Domain
 Use Amazon Route 53 and an AWS Certificate Manager certificate to serve the website through a custom domain over HTTPS. For CloudFront, the ACM certificate must be provisioned in us-east-1.
 
-#### 5. Improve Cache Management
+<!-- #### 5. Improve Cache Management
 Configure cache policies and object-specific caching. Add CloudFront invalidations or versioned asset filenames to ensure updated website files become available promptly.
 
 #### 6. Add Environment Support
@@ -333,18 +343,9 @@ Consider AWS WAF to protect the CloudFront distribution against common web explo
 Integrate tools such as Checkov, Trivy, or TFLint to identify infrastructure misconfigurations, improve Terraform quality, and enforce coding standards.
 
 #### 10. Improve Website Deployment Reliability
-Separate infrastructure provisioning from website publishing when appropriate. Consider immutable or versioned assets, deployment validation, and a rollback strategy.
+Separate infrastructure provisioning from website publishing when appropriate. Consider immutable or versioned assets, deployment validation, and a rollback strategy. -->
 
 
-
-## 🧹 Infrastructure Cleanup
-To remove the infrastructure created by Terraform, run:
-```
-terraform destroy
-```
-Review the proposed deletion and confirm when prompted.
-
-Important: Terraform may be unable to delete an S3 bucket while it contains objects. Empty the bucket first or implement an appropriate cleanup strategy. Do not run this command against shared or production infrastructure without reviewing the impact.
 
 
 
@@ -366,6 +367,8 @@ This project demonstrates how to provision a static website hosting architecture
 It combines infrastructure automation, private object storage, CDN configuration, and access-control policies to build a foundation for secure and maintainable static website delivery.
 
 The project can be extended with CI/CD automation, custom domains, centralized state management, monitoring, and automated security checks to move toward a more production-ready deployment workflow.
+
+
 ---
 If you found this project useful, consider giving the repository a ⭐ on GitHub.
 
