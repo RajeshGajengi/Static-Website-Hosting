@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Successfully deployed a static website on AWS using Terraform, S3 and CloudFront.">
+    <title>Deployment Successful | AWS DevOps Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">☁</span> CloudLaunch
+        </a>
+
+        <nav>
+            <a href="#architecture">Architecture</a>
+            <a href="#learnings">Learnings</a>
+            <button id="themeToggle" aria-label="Toggle theme">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="success-badge">
+                <span class="pulse"></span>
+                APPLICATION DEPLOYED SUCCESSFULLY
+            </div>
+
+            <div class="checkmark">✓</div>
+
+            <h1>Congratulations!<br>
+                <span>Your Application Is Live.</span>
+            </h1>
+
+            <p class="hero-description">
+                You just completed your DevOps project!
+                Your static website is hosted on Amazon S3,
+                distributed globally through CloudFront, and
+                provisioned using Terraform Infrastructure as Code.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#architecture" class="btn primary">
+                    Explore Architecture ↓
+                </a>
+                <a href="#learnings" class="btn secondary">
+                    What I Learned
+                </a>
+            </div>
+
+            <div class="deployment-info">
+                <div>
+                    <span class="info-label">PROJECT STATUS</span>
+                    <strong><span class="green-dot"></span> Deployment Complete</strong>
+                </div>
+                <div>
+                    <span class="info-label">INFRASTRUCTURE</span>
+                    <strong>AWS + Terraform</strong>
+                </div>
+                <div>
+                    <span class="info-label">DELIVERY</span>
+                    <strong>CloudFront CDN</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="architecture">
+            <div class="section-heading">
+                <span class="eyebrow">THE INFRASTRUCTURE</span>
+                <h2>How the website works</h2>
+                <p>From a visitor's browser to globally distributed content.</p>
+            </div>
+
+            <div class="architecture">
+                <div class="architecture-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Internet</h3>
+                    <p>User visits the website through a browser.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="architecture-card featured">
+                    <div class="service-icon">🚀</div>
+                    <h3>CloudFront</h3>
+                    <p>Delivers content globally using edge locations and HTTPS.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="architecture-card">
+                    <div class="service-icon">🪣</div>
+                    <h3>Amazon S3</h3>
+                    <p>Stores HTML, CSS and JavaScript files.</p>
+                </div>
+            </div>
+
+            <div class="terraform-note">
+                <span>⚙️</span>
+                <p><strong>Infrastructure as Code</strong><br>
+                Terraform provisions and manages the AWS resources.</p>
+            </div>
+        </section>
+
+        <section class="section" id="learnings">
+            <div class="section-heading">
+                <span class="eyebrow">MY LEARNING JOURNEY</span>
+                <h2>What I learned during this project</h2>
+                <p>Practical cloud and DevOps skills gained through implementation.</p>
+            </div>
+
+            <div class="learning-grid">
+                <article class="learning-card">
+                    <span class="card-icon">🏗️</span>
+                    <h3>Terraform & IaC</h3>
+                    <p>Created reusable infrastructure configuration and managed AWS resources as code.</p>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-icon">🪣</span>
+                    <h3>Amazon S3</h3>
+                    <p>Learned bucket configuration, object uploads, static website hosting and access policies.</p>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-icon">🌍</span>
+                    <h3>CloudFront CDN</h3>
+                    <p>Understood content caching, global edge locations and HTTPS delivery.</p>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-icon">🔐</span>
+                    <h3>AWS Security</h3>
+                    <p>Explored least-privilege permissions, S3 access controls and secure origin access.</p>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-icon">📦</span>
+                    <h3>File Provisioning</h3>
+                    <p>Used Terraform for_each to upload website assets with appropriate MIME types.</p>
+                </article>
+
+                <article class="learning-card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Deployment & Caching</h3>
+                    <p>Learned how to update website files, invalidate cached content and troubleshoot deployments.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="challenge">
+            <span class="eyebrow">A SMALL STEP. A BIG MILESTONE.</span>
+            <h2>From writing code to deploying to the cloud.</h2>
+            <p>
+                This project is a foundation for learning real-world DevOps.
+                Next, automate deployments with GitHub Actions, add monitoring,
+                and improve security and reliability.
+            </p>
+            <button class="btn primary" id="celebrateBtn">
+                🎉 Celebrate My Achievement
+            </button>
+            <p id="celebrationMessage" class="celebration-message"></p>
+        </section>
+
+        <section class="counter-section">
+            <p>You've visited this interactive demo</p>
+            <div class="counter" id="visitCounter">0</div>
+            <button class="btn secondary" id="counterBtn">Count a Click</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS, JavaScript, Terraform & AWS</p>
+        <p class="footer-subtitle">My DevOps Learning Journey · 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
